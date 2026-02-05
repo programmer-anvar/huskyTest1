@@ -1,10 +1,9 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 MSG_FILE=$1
-MSG=$(cat "$MSG_FILE")
+FIRST_LINE=$(head -n 1 "$MSG_FILE")
 
-if [ ${#MSG} -lt 10 ]; then
-  echo "❌ Commit message juda qisqa"
+echo "$FIRST_LINE" | grep -Eq '^(feat|fix|refactor|chore|docs|test): ' || {
+  echo "❌ Commit feat:, fix:, refactor:, chore:, docs:, test: bilan boshlansin"
   exit 1
-fi
+}
+
+exit 0
