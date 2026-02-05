@@ -1,4 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "commit-msg ishladi"
+MSG_FILE=$1
+MSG=$(cat "$MSG_FILE")
+
+if [ ${#MSG} -lt 10 ]; then
+  echo "❌ Commit message juda qisqa"
+  exit 1
+fi
