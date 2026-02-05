@@ -1,9 +1,9 @@
-function App() {
+const App = () => {
   return (
-    <>
-      <div>
-      </div>
-    </>
+    <div>
+      
+    </div>
   )
 }
-export default App;
+
+export default App
