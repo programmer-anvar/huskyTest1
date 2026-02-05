@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "lint": "eslint .",
-     "lint:check": "npm run lint && echo \"✅ Codingiz yaxshi (lint OK)\""
+    "lint:fix": "eslint . --fix",
+    "lint:check": "npm run lint:fix && echo \"✅ Codingiz avtomatik to‘g‘rilandi va toza\""
   },
   "dependencies": {
     "react": "^19.2.0",

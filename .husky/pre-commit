@@ -1,5 +1,4 @@
 
-npm run lint
-npm run lint:check
+npm run lint:fix
 
 
