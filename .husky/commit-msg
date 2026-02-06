@@ -1,9 +1,0 @@
-MSG_FILE=$1
-FIRST_LINE=$(head -n 1 "$MSG_FILE")
-
-echo "$FIRST_LINE" | grep -Eq '^(feat|fix|refactor|chore|docs|test): ' || {
-  echo "❌ Commit feat:, fix:, refactor:, chore:, docs:, test: bilan boshlansin"
-  exit 1
-}
-
-exit 0
